@@ -1,4 +1,8 @@
-### Hi there 👋
+# Diego Gutiérrez
+### Undergraduate Data Science Student
+### Universidad Autónoma de Baja California, Ensenada, Baja California, México
+
+Example
 
 <!--
 **diego-gutierrez10/diego-gutierrez10** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
