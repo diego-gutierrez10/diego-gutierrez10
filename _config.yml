@@ -1,4 +1,4 @@
 title: Diego Gutiérrez
 #logo: /assets/imgs
 #description: Undergraduate Data Science Student
-remote_theme: biscuit
+theme: jekyll-theme-minimal
