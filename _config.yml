@@ -1,3 +1,27 @@
 theme: jekyll-theme-minimal
-title: My Profile
-description: My personal GitHub Pages site 
+title: Diego A. Gutiérrez - Portafolio
+description: Portafolio de Diego A. Gutiérrez: trayectoria, habilidades y proyectos.
+url: "https://diego-gutierrez10.github.io"
+baseurl: ""
+lang: es
+
+# Redes sociales
+social:
+  github: diego-gutierrez10
+  linkedin: diego-a-gutierrez
+  twitter: diegut1000
+  instagram: 
+
+# Configuración de construcción
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclusiones
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/
+  - README.md 

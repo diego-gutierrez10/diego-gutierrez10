@@ -1,0 +1,244 @@
+/* HEADER - Estilo Isla Dinámica */
+header {
+    position: fixed;
+    top: 20px; /* Espacio desde la parte superior */
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 40px); /* Ancho con márgenes laterales */
+    max-width: 1100px; /* Ancho máximo de la isla */
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo ligeramente transparente */
+    backdrop-filter: blur(10px); /* Efecto blur para el fondo */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    z-index: 1000;
+    padding: 10px 0; /* Padding vertical reducido */
+    border-radius: 50px; /* Bordes redondeados para efecto isla/píldora */
+    transition: all 0.3s ease; /* Transición suave */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between; /* Asegura separación entre logo y nav */
+    align-items: center;
+    padding: 0 30px; /* Padding horizontal interno */
+    max-width: 100%; /* El container ocupa todo el ancho de la isla */
+    margin: 0 auto;
+    width: 100%; /* Asegura que el container use el espacio */
+}
+
+.logo a {
+    font-weight: 700;
+    font-size: 1.3rem; /* Ajuste ligero de tamaño */
+    color: #222; /* Color de texto más oscuro */
+    text-decoration: none;
+    transition: color 0.3s ease;
+    white-space: nowrap; /* Evita que el logo se rompa */
+}
+
+.logo a:hover {
+    color: #005bb5; /* Azul más oscuro para hover */
+}
+
+/* Contenedor de navegación e idioma */
+.nav-lang-container {
+    display: flex;
+    align-items: center;
+    gap: 25px; /* Espacio entre nav y lang-toggle */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 25px; /* Espacio entre elementos de nav */
+}
+
+nav ul li {
+    margin-left: 0; /* Eliminamos margen extra */
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem; /* Tamaño de fuente ligeramente menor */
+    transition: color 0.3s ease;
+    white-space: nowrap; /* Evita que los enlaces se rompan */
+}
+
+nav ul li a:hover {
+    color: #005bb5;
+}
+
+/* Estilo para el toggle de idioma - Forma Cápsula */
+.lang-toggle {
+    margin-left: 0; /* Eliminamos margen extra */
+    display: flex;
+    align-items: center;
+}
+
+.lang-switch {
+    position: relative;
+    display: inline-flex; /* Usamos inline-flex para ajustar al contenido */
+    align-items: center;
+    justify-content: space-around; /* Espacio alrededor de las etiquetas */
+    width: 72px; /* Ancho ajustado para la forma */
+    height: 32px; /* Altura ajustada */
+    background-color: #e9e9e9; /* Fondo ligeramente más oscuro */
+    border-radius: 16px; /* Mitad de la altura para forma cápsula (RESTAURADO) */
+    padding: 0 5px; /* Padding horizontal para espacio */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden; /* Importante para que el slider no se salga */
+    box-sizing: border-box; /* Incluir padding en el ancho/alto */
+}
+
+.lang-switch-slider {
+    position: absolute;
+    top: 2px; /* Ajuste para centrar verticalmente */
+    left: 2px; /* Posición inicial */
+    width: 36px; /* Ancho del slider */
+    height: 28px; /* Altura del slider */
+    border-radius: 14px; /* Mitad de la altura para forma cápsula (RESTAURADO) */
+    background-color: #4F8A83;
+    transition: transform 0.3s ease;
+    z-index: 1;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.15); /* Sombra sutil */
+}
+
+.lang-switch[data-active="en"] .lang-switch-slider {
+    transform: translateX(0px); /* Posición inicial */
+}
+
+.lang-switch[data-active="es"] .lang-switch-slider {
+    /* Nueva posición: Ancho total - Ancho slider - Padding izquierdo */
+    /* 70 - 30 - 2 = 38px */
+    transform: translateX(32px); /* Ajuste fino */
+}
+
+.lang-label {
+    font-size: 12px; /* Tamaño de fuente */
+    font-weight: 600;
+    color: #555; /* Color de texto inicial */
+    z-index: 2;
+    transition: color 0.3s ease;
+    line-height: 28px; /* Centrado vertical: IGUAL a la altura del slider */
+    text-align: center;
+    width: 30px; /* Asegurar que cada label ocupe su espacio */
+    height: 28px; /* Añadido para asegurar que el line-height funcione */
+    display: inline-block; /* Asegurar que width/height apliquen */
+}
+
+/* Ajustamos el primer label (EN) */
+.lang-label-en {
+    /* No necesita margen específico si usamos space-around */
+}
+
+/* Ajustamos el segundo label (ES) */
+.lang-label-es {
+     /* No necesita margen específico si usamos space-around */
+}
+
+.lang-switch[data-active="en"] .lang-label-en,
+.lang-switch[data-active="es"] .lang-label-es {
+    color: #fff; /* Texto blanco sobre el slider */
+}
+
+/* Botón de menú móvil */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.4rem; /* Tamaño ajustado */
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    margin-left: 15px; /* Espacio a la izquierda del botón */
+}
+
+.menu-toggle:hover {
+    color: #4F8A83;
+}
+
+/* --- RESPONSIVE STYLES --- */
+@media (max-width: 768px) {
+    header {
+        /* La isla puede ocupar más ancho en móvil si se prefiere */
+        width: calc(100% - 20px);
+        top: 10px;
+        padding: 8px 0; /* Padding vertical menor */
+        border-radius: 40px; /* Radio menor en móvil */
+    }
+
+    header .container {
+        padding: 0 20px; /* Padding interno menor */
+        position: relative; /* Para posicionar el menú */
+    }
+
+    .nav-lang-container {
+        /* Ocultamos el contenedor en móvil, se muestra en el menú desplegable */
+        display: none;
+        position: absolute;
+        top: calc(100% + 10px); /* Debajo de la isla */
+        left: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(8px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+        padding: 15px;
+        flex-direction: column;
+        align-items: center; /* Centramos los items */
+        gap: 15px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+    }
+
+    header .container.menu-active .nav-lang-container {
+        display: flex; /* Mostramos el contenedor */
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    nav ul {
+        flex-direction: column; /* Cambiamos a columna */
+        gap: 10px; /* Espacio menor */
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 5px 0; /* Margen vertical */
+    }
+
+    .lang-toggle {
+        margin-top: 10px; /* Espacio sobre el selector de idioma */
+    }
+
+    .menu-toggle {
+        display: block; /* Mostramos el botón hamburguesa */
+    }
+
+    /* Ocultamos nav y lang-toggle originales dentro de .nav-lang-container en desktop */
+    /* Esto ya no es necesario con el nuevo enfoque de ocultar .nav-lang-container */
+}
+
+/* Ajuste para pantallas muy pequeñas si es necesario */
+@media (max-width: 480px) {
+     header .container {
+        padding: 0 15px;
+     }
+     .logo a {
+         font-size: 1.2rem;
+     }
+     .menu-toggle {
+         font-size: 1.3rem;
+     }
+     .nav-lang-container {
+         border-radius: 15px;
+         padding: 10px;
+     }
+} 

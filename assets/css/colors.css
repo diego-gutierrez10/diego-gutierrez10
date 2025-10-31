@@ -1,0 +1,27 @@
+/* 
+ * Paleta de colores personalizada
+ * Puedes modificar estos valores para cambiar el aspecto de tu sitio
+ */
+
+:root {
+  /* Colores principales */
+  --primary-bg: #EFE9D9;      /* Beige papel ligero */
+  --secondary-bg: #FFFDFA;    /* Blanco hueso */
+  --accent-green: #4F8A83;    /* Verde menta */
+  --accent-blue: #A5C4D4;     /* Azul pálido */
+  --text-dark: #333333;       /* Gris oscuro casi negro */
+  --text-light: #666666;      /* Gris medio para textos secundarios */
+  --border-color: #D0C8B0;    /* Beige bordes, más oscuro */
+  
+  /* Variaciones de colores (opcionales) */
+  --accent-green-light: #8CBEB9;
+  --accent-green-dark: #3A6B66;
+  --accent-blue-light: #C7DBEA;
+  --accent-blue-dark: #7A9BAC;
+  
+  /* Colores adicionales */
+  --success: #4CAF50;
+  --warning: #FFC107;
+  --error: #F44336;
+  --info: #2196F3;
+} 

@@ -1,0 +1,36 @@
+[
+    {
+        "company": "Smartlands - Real Estate",
+        "company_location": "Ensenada, MX",
+        "role": "Sales Automation Manager",
+        "team": "Sales",
+        "time_duration": "Dec 2024 - Present",
+        "details": [
+            {
+                "title": "Sales Funnel Implementation",
+                "description": "Designed and implemented an automated sales funnel by integrating CRM software and advertising platforms to optimize lead management."
+            },
+            {
+                "title": "Landing Pages Implementation",
+                "description": "Acquired and set up a custom domain, creating a high-performing lead-capture website, landing page, to attract and convert prospects effectively."
+            }
+        ]
+    },
+    {
+        "company": "PRB Financial Services - Insurance",
+        "company_location": "Napa, CA (Remote)",
+        "role": "Advertising Developer and Community Manager",
+        "team": "Advertising",
+        "time_duration": "August 2023 - July 2024",
+        "details": [
+            {
+                "title": "Community Manager",
+                "description": "Produced multimedia content for the company's website and social media platforms, promoting life insurance and retirement funds."
+            },
+            {
+                "title": "Advertising Creation",
+                "description": "Automated sales processes by generating high-value leads through targeted campaigns, increasing engagement and conversions."
+            }
+        ]
+    }
+]
